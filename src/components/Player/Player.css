@@ -1,0 +1,155 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85px;
+
+  background: #292929;
+  border-top: 1px solid #3a3a3a;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+}
+
+.player-song {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 30%;
+}
+
+.player-cover {
+  width: 55px;
+  height: 55px;
+
+  background: #3a3a3a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+  font-size: 25px;
+  overflow: hidden;
+}
+
+.player-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-song h4 {
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-song p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.player-controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.player-center {
+  width: 40%;
+  display: grid;
+  gap: 10px;
+}
+
+.player-progress {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr) 38px;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 12px;
+}
+
+.player-progress input {
+  width: 100%;
+}
+
+.player-volume {
+  width: 30%;
+  text-align: right;
+}
+
+.player-volume input {
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .player {
+    padding: 0 15px;
+  }
+
+  .player-song {
+    width: 35%;
+  }
+
+  .player-volume {
+    width: 25%;
+  }
+
+  .player-center {
+    width: 40%;
+  }
+
+  .player-song p {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .player {
+    height: 75px;
+  }
+
+  .player-song {
+    width: 40%;
+  }
+
+  .player-song h4 {
+    font-size: 13px;
+  }
+
+  .player-cover {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .player-controls {
+    gap: 10px;
+  }
+
+  .player-progress {
+    display: none;
+  }
+
+  .player-volume {
+    width: 20%;
+  }
+
+  .player-volume input {
+    display: none;
+  }
+}

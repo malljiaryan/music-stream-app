@@ -1,0 +1,156 @@
+.music-card {
+  background: #303030;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 0;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.music-card:hover {
+  background: #383838;
+  transform: translateY(-3px);
+}
+
+.music-cover-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.music-cover {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #414141;
+  border-radius: 8px;
+
+  font-size: clamp(35px, 4vw, 55px);
+
+  overflow: hidden;
+}
+
+.music-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-play-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #f1f1f1;
+  color: #222;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(6px);
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.music-card:hover .card-play-button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-play-button:hover {
+  background: #ffffff;
+  transform: scale(1.08);
+}
+
+.music-card-info {
+  padding: 10px 2px 2px;
+}
+
+.music-card-info h3 {
+  font-size: 15px;
+  font-weight: 500;
+
+  margin-bottom: 5px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-card-info p {
+  font-size: 13px;
+  color: #b8b8b8;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-favorite {
+  width: 100%;
+  min-height: 32px;
+  margin-top: 10px;
+  border: 1px solid #484848;
+  border-radius: 8px;
+  background: #262626;
+  color: #d8d8d8;
+  cursor: pointer;
+}
+
+.card-favorite.active {
+  border-color: #ececec;
+  background: #eeeeee;
+  color: #1e1e1e;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+  .music-card {
+    padding: 10px;
+  }
+
+  .card-play-button {
+    width: 36px;
+    height: 36px;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .music-card-info h3 {
+    font-size: 14px;
+  }
+
+  .music-card-info p {
+    font-size: 12px;
+  }
+
+  .card-play-button {
+    width: 32px;
+    height: 32px;
+    font-size: 11px;
+  }
+}

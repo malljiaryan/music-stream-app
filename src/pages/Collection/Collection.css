@@ -1,0 +1,73 @@
+.collection-page,
+.collection-section {
+  width: 100%;
+}
+
+.collection-section {
+  margin-bottom: 38px;
+}
+
+.playlist-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.playlist-form input {
+  min-width: 0;
+  flex: 1;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: #292929;
+  color: #ffffff;
+  padding: 12px 14px;
+}
+
+.playlist-form button {
+  border: none;
+  border-radius: 20px;
+  background: #f2f2f2;
+  color: #202020;
+  padding: 0 20px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.playlist-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.playlist-panel {
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: #292929;
+  padding: 14px;
+}
+
+.playlist-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.playlist-panel-header h3 {
+  font-size: 17px;
+}
+
+.playlist-panel-header span,
+.playlist-empty {
+  color: #b8b8b8;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .playlist-form {
+    flex-direction: column;
+  }
+
+  .playlist-form button {
+    min-height: 42px;
+  }
+}

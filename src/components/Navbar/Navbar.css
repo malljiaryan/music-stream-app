@@ -1,0 +1,170 @@
+.navbar {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+ background: #292929;
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo span {
+  font-size: 28px;
+}
+
+.navbar-logo h2 {
+  font-size: 20px;
+}
+
+.navbar-search input {
+  width: 350px;
+  padding: 12px 18px;
+  border: 1px solid #3a3a3a;
+  outline: none;
+  border-radius: 25px;
+
+  background: #353535;
+  color: white;
+}
+
+.navbar-search {
+  position: relative;
+}
+
+.navbar-search-clear {
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: #4a4a4a;
+  color: #f2f2f2;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.navbar-search-clear:hover {
+  background: #5a5a5a;
+}
+
+.navbar-search input::placeholder {
+  color: #aaa;
+}
+
+.navbar-filter select {
+  width: 170px;
+  border: 1px solid #3a3a3a;
+  border-radius: 22px;
+  background: #353535;
+  color: #ffffff;
+  padding: 11px 14px;
+  outline: none;
+  cursor: pointer;
+}
+
+.navbar-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-user button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+
+  background: #f0f0f0;
+  color: #222;
+  font-size: 15px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user span {
+  max-width: 120px;
+  color: #d7d7d7;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navbar-user button:hover {
+  background: #ffffff;
+}
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .navbar-logo h2 {
+    display: none;
+  }
+
+  .navbar-search input {
+    width: 250px;
+  }
+
+  .navbar-filter select {
+    width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    min-height: 70px;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0 12px;
+  }
+
+  .navbar-search {
+    flex: 1;
+    margin: 0 12px;
+  }
+
+  .navbar-search input {
+    width: 100%;
+  }
+
+  .navbar-filter {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-filter select {
+    width: 100%;
+  }
+
+  .navbar-user button {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-search input {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .navbar-user button {
+    padding: 7px 12px;
+  }
+}

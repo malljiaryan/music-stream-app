@@ -1,0 +1,188 @@
+.home-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Welcome Section */
+.home-welcome {
+  margin-bottom: 30px;
+}
+
+.home-welcome h1 {
+  font-size: clamp(26px, 3vw, 34px);
+  margin-bottom: 8px;
+}
+
+.home-welcome p {
+  font-size: 16px;
+  color: #b8b8b8;
+}
+
+.api-message {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  background: #292929;
+  color: #d8d8d8;
+}
+
+.api-message-error {
+  border-color: #8f3b3b;
+  background: #352323;
+  color: #ffd7d7;
+}
+
+/* Music Section */
+.music-section {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section-header h2 {
+  font-size: clamp(20px, 2vw, 24px);
+}
+
+.section-header button {
+  border: none;
+  background: transparent;
+  color: #b8b8b8;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.section-header button:hover {
+  color: #ffffff;
+}
+
+/* Music Card Grid */
+.music-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* Large Desktop */
+@media (max-width: 1200px) {
+  .music-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .music-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+/* Small Tablet */
+@media (max-width: 700px) {
+  .music-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .home-page {
+    width: 100%;
+  }
+
+  .home-welcome {
+    margin-bottom: 22px;
+  }
+
+  .home-welcome h1 {
+    font-size: 25px;
+  }
+
+  .home-welcome p {
+    font-size: 14px;
+  }
+
+  .music-section {
+    margin-bottom: 25px;
+  }
+
+  .section-header {
+    margin-bottom: 14px;
+  }
+
+  .section-header h2 {
+    font-size: 19px;
+  }
+
+  .section-header button {
+    font-size: 13px;
+  }
+
+  .music-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 350px) {
+  .music-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Popular Songs */
+
+.popular-section {
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.song-list {
+  width: 100%;
+  background: #292929;
+  border: 1px solid #373737;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+/* Trending Albums */
+
+.trending-albums-section {
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 110px;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .popular-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .song-list {
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .trending-albums-section {
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+}
